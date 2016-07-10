@@ -4,5 +4,55 @@
   <artifactId>wui-baseline</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>Web UI Template</name>
-  <description>Generic UI Module driven by webservices</description>
+  <description>Generic Web UI Module driven by webservices</description>
+  <packaging>war</packaging>
+  
+  <properties>
+    <jettyVersion>9.3.10.v20160621</jettyVersion>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angular-ui-bootstrap</artifactId>
+      <version>1.3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angularjs</artifactId>
+      <version>1.5.7</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+
+<!-- 
+    <dependency>
+      <groupId></groupId>
+      <artifactId></artifactId>
+      <version></version>
+    </dependency>
+ -->
+  </dependencies>
+
+  <build>
+    <finalName>wui</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webApp>
+          	<contextPath>/wui</contextPath>
+          </webApp>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
