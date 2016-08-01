@@ -12,6 +12,23 @@
   </properties>
   
   <dependencies>
+<!-- 
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>angular-ui-bootstrap</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angular-ui-router</artifactId>
+      <version>0.2.18</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angular-ui-utils</artifactId>
+      <version>0.2.2</version>
+    </dependency>
+ -->
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>angular-ui-bootstrap</artifactId>
@@ -22,6 +39,7 @@
       <artifactId>angularjs</artifactId>
       <version>1.5.7</version>
     </dependency>
+        
     
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -40,6 +58,11 @@
 
   <build>
     <finalName>wui</finalName>
+    <directory>target</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
