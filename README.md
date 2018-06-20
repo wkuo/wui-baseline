@@ -14,6 +14,7 @@ This project is to build a web UI baseline that come with the common components.
 The web UI layout and behavior is driven by configuration (in JSON) via webservice.
 The developer just need to setup this once at the back-end tables and then focus on the requirements.
 
+========= This project will be change to use webpack, the following command will be update once modified to webpack =====
 Prerequisites 
 - Java 1.8 or higher
 - Maven 3.1 or higher
